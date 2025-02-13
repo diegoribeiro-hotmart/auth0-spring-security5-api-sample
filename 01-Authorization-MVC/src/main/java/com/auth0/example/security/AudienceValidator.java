@@ -17,7 +17,7 @@ class AudienceValidator implements OAuth2TokenValidator<Jwt> {
 
     public OAuth2TokenValidatorResult validate(Jwt jwt) {
         OAuth2Error error = new OAuth2Error("invalid_token", "The required audience is missing", null);
-        Objects.requireNonNull(jwt);
+        Object.requireNonNull(jwt, "JWT object must not be null");
 
         if (jwt.getAudience().contains(audience)) {
             return OAuth2TokenValidatorResult.success();
