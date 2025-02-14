@@ -19,3 +19,4 @@ jobs:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           pr_reviewer.extra_instructions: "Answer in brazilian portuguese"
+          pr_code_suggestions.commitable_code_suggestions: true
