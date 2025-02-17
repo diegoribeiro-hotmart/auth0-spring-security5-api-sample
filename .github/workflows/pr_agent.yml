@@ -18,5 +18,15 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          pr_reviewer.extra_instructions: "Answer in brazilian portuguese"
-          pr_code_suggestions.commitable_code_suggestions: true
+          PR_REVIEWER.REQUIRE_CAN_BE_SPLIT_REVIEW: true
+          PR_REVIEWER.PERSISTENT_COMMENT: false
+          PR_REVIEWER.EXTRA_INSTRUCTIONS: >
+            - Write answer in brazilian portuguese
+          PR_DESCRIPTION.PUBLISH_DESCRIPTION_AS_COMMENT_PERSISTENT: false
+          PR_DESCRIPTION.EXTRA_INSTRUCTIONS: >
+            - Write answer in brazilian portuguese
+          PR_CODE_SUGGESTIONS.COMMITABLE_CODE_SUGGESTIONS: true
+          PR_CODE_SUGGESTIONS.DEMAND_CODE_SUGGESTIONS_SELF_REVIEW: true
+          BEST_PRACTICES.ORGANIZATION_NAME: Hotmart
+          BEST_PRACTICES.CONTENT: >
+            Hello World!
